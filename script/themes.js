@@ -5,19 +5,7 @@ return random
 }
 
 setTheme = () => {
-    const selector = document.getElementsByClassName("image")[0]
-    savedTheme = localStorage.getItem('theme')
-    if(savedTheme) {
-        document.documentElement.className = savedTheme
-    }
-
-
-
-    selector.addEventListener("click", () => {
-        theme = themeRandomizer()
-        document.documentElement.className = theme
-        localStorage.setItem('theme', theme)
-    })
+    document.documentElement.className = "pastel"
 }
 
 setTheme()
