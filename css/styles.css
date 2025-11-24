@@ -9,17 +9,15 @@
     --title-color: #A60E10ff;
     --link-color: #F0F0F0ff;
     --hover-color: #1C1C1Cff;
-    --image: url("/img/guts.WebP")
     }
 
     :root.pastel {
-        --background-color: #FDF4F5;
-        --header-color: #BA90C6;
-        --status-color: #BA90C6;
+        --background-color: #0d1529;
+        --header-color: #F9F3EF;
+        --status-color: #F9F3EF;
         --title-color: #E8A0BF;
-        --link-color: #BA90C6;
+        --link-color: #F9F3EF;
         --hover-color: #C0DBEA;
-        --image: url("/img/pastel.WebP")
     }
 
     :root.alcest {
@@ -29,7 +27,6 @@
         --title-color: #7A8996ff;
         --link-color: #D4DED6ff;
         --hover-color: #7A8996ff;
-        --image: url("/img/alcest.WebP")
     }
 
     :root.griffith {
@@ -39,7 +36,6 @@
         --title-color: #353636ff;
         --link-color: #F0F0F0ff;
         --hover-color: #353636ff;
-        --image: url("/img/griffith.WebP")
     }
 
     
@@ -51,7 +47,7 @@
         --title-color:  #D99433;
         --link-color: #EDF0E8;
         --hover-color: #433F57;
-        --image: url("/img/gold.WebP")
+
     }
 
 
@@ -86,10 +82,17 @@ h1 {
     margin-right: 14vh;
 }
 
+h2 {
+    color: var(--header-color);
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5rem;
+    margin-right: 14vh;
+}
+
 .status-strip {
     margin-right: 14vh;
     margin-top: 1vh;
-    margin-bottom: 8vh;
+    margin-bottom: 4vh;
     color:var(--status-color);
     font-family: 'Overpass', sans-serif;
     font-size: 1.5rem;
@@ -143,10 +146,9 @@ img {
     border-radius: 8px;
     grid-row: 2;
     justify-self: end;
-    width: 60vh;
+    width: 70vh;
     height: 60vh;
     margin-right: 15vh;
-    content: var(--image);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.12);
 }
 

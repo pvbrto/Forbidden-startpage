@@ -1,9 +1,7 @@
-const { weatherAPI } = require('./config/config.JSON')
-
 
 // Initial API call
 const getWeather = async () => {
-    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=33.8938&lon=35.5018&appid=${weatherAPI}&units=metric`)
+    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=-23.7050&lon=-46.7076&appid=${"9036c03eecb9f082f10c518e548ed443"}&units=metric`)
     const weather = await res.json()
     return weather
 }
@@ -28,7 +26,7 @@ const displayWeather = async () => {
         document.getElementsByClassName("weather")[0].innerHTML = `<i class="fa-solid fa-moon"></i> <span>${weather.main.temp}°</span>`
 
         if(weatherCondition == 2 || weatherCondition == 3 || weatherCondition == 5) {
-            document.getElementsByClassName("weather")[0].innerHTML = `<i class="fa-solid fa-cloud-moon-rain"></i> <span>${weather.main.temp}°</span>`
+            document.getElementsByClassName("weather")[0].innerHTML = `<i class="fa-solid fa-cloud-moon-rain"></i> <span>${weather.main.temp} C</span>`
         }
 
     } 
@@ -36,7 +34,7 @@ const displayWeather = async () => {
     else {
         document.getElementsByClassName("weather")[0].innerHTML = `<i class="fa-solid fa-sun"></i> <span>${weather.main.temp}°</span>`
         if(weatherCondition === 2 || weatherCondition === 3 || weatherCondition === 5) {
-            document.getElementsByClassName("weather")[0].innerHTML = `<i class="fa-solid fa-cloud-sun-rain"></i> <span>${weather.main.temp}°</span>`
+            document.getElementsByClassName("weather")[0].innerHTML = `<i class="fa-solid fa-cloud-sun-rain"></i> <span>${weather.main.temp} C</span>`
         }
     }
 }
